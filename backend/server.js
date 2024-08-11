@@ -182,7 +182,7 @@ app.post('/postdata',(req,res) => {
     }
     io.emit('activate');
 })
-
-server.listen(3001, () => {
+PORT = 3001;
+server.listen(PORT, () => {
     console.log("Listening at port 3001...")
 })
