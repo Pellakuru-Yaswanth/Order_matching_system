@@ -37,10 +37,10 @@ function App() {
   }
 
   const loaddata = () => {
-    axios.get("http://localhost:3001/getpdata").then(res => {
+    axios.get("https://order-matching-system-h8ll.onrender.com/getpdata").then(res => {
       loadMain(res.data[0],res.data[1]);
     }).catch(console.log("Error occured"));
-    axios.get("http://localhost:3001/getcdata").then(res => {
+    axios.get("https://order-matching-system-h8ll.onrender.com/getcdata").then(res => {
       setCorders(res.data);
     }).catch(console.log("Error occured"));
   }
@@ -48,11 +48,11 @@ function App() {
 const postData = (type, id, price, qty) => {
     setLoad(true);
     let maxo = "corders";
-    axios.get("http://localhost:3001/getMaxId", {maxo}).then(res => {
+    axios.get("https://order-matching-system-h8ll.onrender.com/getMaxId", {maxo}).then(res => {
       if(res.data===false) alert("Could not process your data!")
       else {
         let cid = res.data;
-        axios.post("http://localhost:3001/postdata",{type, cid, id, price, qty}).then(res => {
+        axios.post("https://order-matching-system-h8ll.onrender.com/postdata",{type, cid, id, price, qty}).then(res => {
           console.log(res.data)
         }).catch(e => {
           console.log(e);
@@ -82,7 +82,7 @@ const postData = (type, id, price, qty) => {
     else if(qty<1) alert("Quantity should be greater than zero(0)!");
     else {
       let maxo = "porders"
-      axios.get("http://localhost:3001/getMaxId", {maxo}).then(res => {
+      axios.get("https://order-matching-system-h8ll.onrender.com/getMaxId", {maxo}).then(res => {
         if(res.data===false) alert("Could not process your data!")
         else  postData(type,res.data,price,qty);
       }).catch("Error occured")
