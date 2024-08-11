@@ -1,0 +1,133 @@
+body{
+  background-color: rgb(219, 219, 243);
+}
+table tr:nth-child(even){
+  background-color: rgb(202, 198, 198);
+}
+.phead, .chead{
+  background-color: rgb(196, 241, 196);
+}
+table{
+  background-color: rgb(243, 243, 240);
+  font-family: 'Courier New', Courier, monospace;
+}
+td, th{
+  /*width: fit-content;*/
+  padding: 5px;
+  text-align: center;
+}
+th{
+  padding: 7px 20px 7px 20px;
+}
+form{
+  margin-left: 10%;
+  background-color: rgb(247, 241, 234);
+  width:fit-content;
+  margin: 3% 1% 1% 10%;
+  padding: 10px 10px 10px 40px;
+  border-radius: 5px;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+form td{
+  text-align: left;
+}
+form #submit{
+  text-align: center;
+}
+#submitb{
+  background-color: aquamarine;
+  padding:5px 10px 5px 10px;
+  border-radius: 5px;
+  border: none;
+  margin-top: 10px;
+  width: 150px;
+  height: 30px;
+  font-size: large;
+}
+#submitb:hover{
+  transform: scale(1.05);
+  cursor: pointer;
+  transition-duration: 0.5s;
+}
+.ordermatching{
+  display: flex;
+}
+#chart{
+  margin-left: 1%;
+}
+#loader{
+  margin: 20px;
+}
+#container{
+  width: fit-content;
+}
+/* Extra small devices (phones, less than 576px) */
+@media (max-width: 575.98px) {
+  table{
+    width: 200px;
+  }
+  h3{margin-left: 120px;}
+  #chart{
+    height: 200px;
+    width: 300px;
+  }
+  table td,th{
+    width: 20px;
+    padding: 1px;
+  }
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+  table{
+    width: 300px;
+  }
+  table td,th{
+    width: 20px;
+  }
+  #chart{
+    height: 200px;
+    width: 300px;
+  }
+  table td,th{
+    width: 30px;
+    padding: 3px;
+  }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  table{
+    width:460px;
+  }
+  #chart{
+    height: 300px;
+    width: 400px;
+  }
+  table td,th{
+    width: 40px;
+    padding: 5px;
+  }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) and (max-width: 1199.98px) { 
+  table{
+    width:600px;
+  }
+  #chart{
+    height: 400px;
+    width: 600px;
+  }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  table{
+    width:600px;
+  }
+  #chart{
+    height: 500px;
+    width: 700px;
+  }
+}
